@@ -38,13 +38,13 @@ def parse_args(argv):
         default='English')
     parser.add_argument(
         '--path',
-        help='path to csv file')
+        help='path to csv filebb')
 
     return parser.parse_args(argv[1:])
 
 
 def readCsv(path):
-    print('\n\n Processing Csv file \n\n')
+    print('\n\n Processing Csv filebb \n\n')
     sys.stdout.flush()
     data = []
     try:
@@ -56,12 +56,12 @@ def readCsv(path):
         with open(path, 'r', encoding="mbcs") as userFile:
             userFileReader = csv.reader(userFile)
             for row in userFileReader:
-                data.append(row)       
+                data.append(row)
     return data
 
 
 def writeCsv(data, LANGUAGE, SENTENCES_COUNT):
-    print('\n\n Updating Csv file \n\n')
+    print('\n\n Updating Csv filebb \n\n')
     sys.stdout.flush()
     with open('beneficiary.csv', 'w') as newFile:
         newFileWriter = csv.writer(newFile)
@@ -90,7 +90,7 @@ def processCsv(path, LANGUAGE, SENTENCES_COUNT):
         data = readCsv(path)
         writeCsv(data, LANGUAGE, SENTENCES_COUNT)
     except:
-        print('\n\n Invalid file in file path \n\n')
+        print('\n\n Invalid filebb in filebb path \n\n')
         sys.stdout.flush()
 
 
@@ -109,7 +109,7 @@ def main(argv=sys.argv):
     if action == 'bulk':
         if path is None:
             print(
-                '\n\n Invalid Entry!, please Ensure you enter a valid file path \n\n')
+                '\n\n Invalid Entry!, please Ensure you enter a valid filebb path \n\n')
             sys.stdout.flush()
             return
         # guide against errors
@@ -117,7 +117,7 @@ def main(argv=sys.argv):
             processCsv(path, LANGUAGE, SENTENCES_COUNT)
         except:
             print(
-                '\n\n Invalid Entry!, please Ensure you enter a valid file path \n\n')
+                '\n\n Invalid Entry!, please Ensure you enter a valid filebb path \n\n')
             sys.stdout.flush()
         print('Completed')
         sys.stdout.flush()

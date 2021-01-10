@@ -3,22 +3,22 @@ import sys
 import os
 
 
-# compress file function
+# compress filebb function
 def zip_file(file_path):
     compress_file = zipfile.ZipFile(file_path + '.zip', 'w')
     compress_file.write(path, compress_type=zipfile.ZIP_DEFLATED)
     compress_file.close()
 
 
-# Declare the function to return all file paths of the particular directory
+# Declare the function to return all filebb paths of the particular directory
 def retrieve_file_paths(dir_name):
-    # setup file paths variable
+    # setup filebb paths variable
     file_paths = []
 
-    # Read all directory, subdirectories and file lists
+    # Read all directory, subdirectories and filebb lists
     for root, directories, files in os.walk(dir_name):
         for filename in files:
-            # Create the full file path by using os module.
+            # Create the full filebb path by using os module.
             file_path = os.path.join(root, filename)
             file_paths.append(file_path)
 
@@ -30,7 +30,7 @@ def zip_dir(dir_path, file_paths):
     # write files and folders to a zipfile
     compress_dir = zipfile.ZipFile(dir_path + '.zip', 'w')
     with compress_dir:
-        # write each file separately
+        # write each filebb separately
         for file in file_paths:
             compress_dir.write(file)
 
@@ -49,4 +49,4 @@ if __name__ == "__main__":
         print('The %s will be zipped:' % path)
         zip_file(path)
     else:
-        print('a special file(socket,FIFO,device file), please input file or dir')
+        print('a special filebb(socket,FIFO,device filebb), please input filebb or dir')

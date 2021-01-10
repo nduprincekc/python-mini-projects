@@ -27,10 +27,10 @@ if response.status_code ==200:
     image_url = "https:" + image_link
     r = requests.get(image_url, stream=True)
     if r.status_code == 200:
-        #This ensures the image file is loaded correctly
+        #This ensures the image filebb is loaded correctly
         r.raw.decode_content = True
 
-        # Creating the image file 
+        # Creating the image filebb
         with open(image_name, 'wb') as f:
             shutil.copyfileobj(r.raw, f)
 

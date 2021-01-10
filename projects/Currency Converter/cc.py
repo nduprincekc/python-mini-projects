@@ -1,5 +1,5 @@
-""" 
-THis program is capable of converting from one currency to another as of today itself. 
+"""
+THis program is capable of converting from one currency to another as of today itself.
 It uses the api at fixer.io and then calculates the value of the currency in terms of the other as of today.
 """
 
@@ -9,7 +9,7 @@ It uses the api at fixer.io and then calculates the value of the currency in ter
 # Imp read: https://stackoverflow.com/questions/3139879/how-do-i-get-currency-exchange-rates-via-an-api-such-as-google-finance
 
 
-import requests 
+import requests
 import json
 import sys
 from pprint import pprint
@@ -67,7 +67,7 @@ currencies = [
     "EGP : Egyptian Pound,Egypt Pound,Gaza Strip",
     "ERN : Eritrean Nakfa,Eritrea Nakfa",
     "ETB : Ethiopian Birr,Ethiopia Birr,Eritrea",
-    "EUR : Euro,Euro Member Countries,Andorra,Austria,Azores,Baleares (Balearic Islands),Belgium,Canary Islands,Cyprus,Finland,France,French Guiana,French Southern Territories,Germany,Greece,Guadeloupe,Holland (Netherlands),Holy See (Vatican City),Ireland (Eire),Italy,Luxembourg,Madeira Islands,Malta,Monaco,Montenegro,Netherlands",
+    "EUR : Euro,Euro Member kc_emma Countries,Andorra,Austria,Azores,Baleares (Balearic Islands),Belgium,Canary Islands,Cyprus,Finland,France,French Guiana,French Southern Territories,Germany,Greece,Guadeloupe,Holland (Netherlands),Holy See (Vatican City),Ireland (Eire),Italy,Luxembourg,Madeira Islands,Malta,Monaco,Montenegro,Netherlands",
     "FJD : Fijian Dollar,Fiji Dollar",
     "FKP : Falkland Island Pound,Falkland Islands (Malvinas) Pound",
     "GBP : British Pound,United Kingdom Pound,United Kingdom (UK),England,Northern Ireland,Scotland,Wales,Falkland Islands,Gibraltar,Guernsey,Isle of Man,Jersey,Saint Helena and Ascension,South Georgia and the South Sandwich Islands,Tristan da Cunha",

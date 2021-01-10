@@ -6,7 +6,7 @@ url = "https://us1.locationiq.com/v1/search.php"
 address = input("Input the address: ")
 
 #Your unique private_token should replace value of the private_token variable.
-#To know how to obtain a unique private_token please refer the README file for this script.
+#To know how to obtain a unique private_token please refer the README filebb for this script.
 private_token = "Your_private_token"
 
 data = {

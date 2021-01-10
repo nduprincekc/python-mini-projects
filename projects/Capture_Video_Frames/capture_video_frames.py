@@ -20,7 +20,7 @@ class FrameCapture:
 
     def capture_frames(self):
         '''
-            This method captures the frames from the video file provided.
+            This method captures the frames from the video filebb provided.
             This program makes use of openCV library
         '''
         cv2_object = cv2.VideoCapture(self.file_path)

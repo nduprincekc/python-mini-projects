@@ -1,10 +1,10 @@
 import re
 
-# script to fetch unique sorted words from a text file.
+# script to fetch unique sorted words from a text filebb.
 list_of_words = []
 
-# Alternate Method to insert file
-# filename = input("Enter file name: ")
+# Alternate Method to insert filebb
+# filename = input("Enter filebb name: ")
 filename = "text_file.txt"
 
 with open(filename, "r") as f:
@@ -14,14 +14,14 @@ with open(filename, "r") as f:
         # else use this alternate method:
         # list_of_words.extend(re.findall(r"[\w]+", line))
 
-        
+
 # Creating a dictionary to store the number of occurence of a word
 unique = {}
 for each in list_of_words:
     if each not in unique:
         unique[each] = 0
     unique[each] += 1
- 
+
 # Creating a list to sort the final unique words
 s = []
 
@@ -29,7 +29,7 @@ s = []
 for key, val in unique.items():
     if val == 1:
         s.append(key)
-        
+
 print(sorted(s))
-    
+
 

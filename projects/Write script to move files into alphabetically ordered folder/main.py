@@ -35,10 +35,10 @@ def readdirectory():
     for files in os.listdir(os.getcwd()):
         if os.path.isfile(os.path.join(os.getcwd(), files)):
             filenames.append(files)
-    filenames.remove('main.py')  # removing script from the file list
+    filenames.remove('main.py')  # removing script from the filebb list
 
 
-# getting the first letters of the file & creating a file in the current_dir
+# getting the first letters of the filebb & creating a filebb in the current_dir
 def createfolder():
     '''
     creating a folders
@@ -52,7 +52,7 @@ def createfolder():
             print('creating folder...')
 
 
-# moving the file into the proper folder
+# moving the filebb into the proper folder
 def movetofolder():
     '''
     movetofolder('zebra.py','z')

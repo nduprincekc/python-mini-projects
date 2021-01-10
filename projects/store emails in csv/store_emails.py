@@ -83,7 +83,7 @@ def write_to_csv(mail, writer):
                 email_body = msg.get_payload(decode=True).decode("utf-8")
                 email_text = get_text(email_body)
 
-            # Write data in the csv file
+            # Write data in the csv filebb
             row = [email_date, email_from, email_subject, email_text]
             writer.writerow(row)
 

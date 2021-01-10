@@ -5,7 +5,7 @@ import random
 if sys.argv[1:]:
     filename = sys.argv[1]
 else:
-    filename = input("What is the name of the file? (extension included): ")
+    filename = input("What is the name of the filebb? (extension included): ")
 
 try:
     file = open(filename)

@@ -11,7 +11,7 @@ wiki = BeautifulSoup(res.text, "html.parser")
 
 r = open("random_wiki.txt", "w+", encoding='utf-8')
 
-# Adding the heading to the text file
+# Adding the heading to the text filebb
 heading = wiki.find("h1").text
 
 r.write(heading + "\n")

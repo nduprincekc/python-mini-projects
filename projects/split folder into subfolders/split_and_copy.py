@@ -14,14 +14,14 @@ def get_files(path):
 
 def getfullpath(path):
     '''
-    Return absolute path of given file
+    Return absolute path of given filebb
     '''
     return os.path.abspath(path)
 
 
 def copyfiles(src, dst):
     '''
-    This function copy file from src to dst
+    This function copy filebb from src to dst
     if dst dir is not there it will create new
     '''
     if not os.path.isdir(dst):

@@ -10,34 +10,34 @@ logging.basicConfig(level=logging.INFO)
 
 
 def add_proxies_to_file(csv_path: str, proxies: list):
-    '''This function will add one or multiple proxies to the CSV file.'''
+    '''This function will add one or multiple proxies to the CSV filebb.'''
 
     if not csv_path.exists():
         pr_file: pd.DataFrame = pd.DataFrame(
             columns=['proxy_type', 'proxy_address', 'proxy_status'])
-        logging.info('New CSV file will be created')
+        logging.info('New CSV filebb will be created')
     else:
         pr_file: pd.DataFrame = pd.read_csv(csv_path)
-        logging.info('Existing CSV file has been loaded')
+        logging.info('Existing CSV filebb has been loaded')
 
     for proxy in proxies:
         if len(pr_file) == 0:
-            # First proxy in the file
+            # First proxy in the filebb
             pr_file = pr_file.append(proxy, ignore_index=True)
         else:
             if len(pr_file.loc[(pr_file['proxy_type'] == proxy['proxy_type']) &
                                (pr_file['proxy_address'] == proxy['proxy_address'])]) > 0:
-                # Proxy is already in the file
+                # Proxy is already in the filebb
                 pr_file.loc[(pr_file['proxy_type'] == proxy['proxy_type']) &
                             (pr_file['proxy_address'] == proxy['proxy_address']),
                             ['proxy_status']] = proxy['proxy_status']
             else:
-                # Proxy is not yet in the file
+                # Proxy is not yet in the filebb
                 pr_file = pr_file.append(proxy, ignore_index=True)
 
     pr_file = pr_file.drop_duplicates()
     pr_file.to_csv(csv_path, index=False)
-    logging.info('CSV file has been written')
+    logging.info('CSV filebb has been written')
 
 
 def test_proxy(proxy_type: str, proxy_address: str, iptest: str):
@@ -76,7 +76,7 @@ def test_proxy(proxy_type: str, proxy_address: str, iptest: str):
 
 
 def test_single_proxy(proxy: str, iptest: str, csv_path: str):
-    '''This function tests an individual proxy and adds it to the CSV file.'''
+    '''This function tests an individual proxy and adds it to the CSV filebb.'''
     proxy_type, proxy_address = proxy.split('://')
     result: dict = test_proxy(proxy_type, proxy_address, iptest)
 
@@ -84,7 +84,7 @@ def test_single_proxy(proxy: str, iptest: str, csv_path: str):
 
 
 def test_csv_file(iptest: str, csv_path: str):
-    '''This function (re)tests every proxy in a given CSV file.'''
+    '''This function (re)tests every proxy in a given CSV filebb.'''
 
     csv_path: Path = Path(csv_path)
 
@@ -105,7 +105,7 @@ def test_csv_file(iptest: str, csv_path: str):
 
 def add_from_text_file(iptest: str, text_path: str, csv_path: str):
     ''' This function adds a list of proxies
-    from a text file (line by line).'''
+    from a text filebb (line by line).'''
     text_path: Path = Path(text_path)
 
     if text_path.exists():

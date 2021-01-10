@@ -31,7 +31,7 @@ def sorting(file):
                 return key
 
 
-#iterat through each file
+#iterat through each filebb
 for file in files:
     dist = sorting(file)
     if dist:

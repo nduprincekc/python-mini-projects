@@ -36,4 +36,4 @@ if os.path.isdir(path) and os.path.exists(path):
 elif os.path.isfile(path) and os.path.exists(path):
     encrypt_file(path)
 else:
-    print("it's a special file(socket,FIFO,device file)")
+    print("it's a special filebb(socket,FIFO,device filebb)")

@@ -2,7 +2,7 @@ import ffmpeg
 import argparse
 
 
-parser = argparse.ArgumentParser(description='''Split A media file
+parser = argparse.ArgumentParser(description='''Split A media filebb
                                             into two chunks''')
 parser.add_argument('inputfile', help="Input filename")
 parser.add_argument('starttime', type=float, help="Start time in seconds")

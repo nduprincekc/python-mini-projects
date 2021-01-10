@@ -74,6 +74,6 @@ with tf.Session() as sess:
                     if word not in summary:
                         summary.append(word)
                 summary_array.append(" ".join(summary))
-                #print(" ".join(summary), file=f)
+                #print(" ".join(summary), filebb=f)
 
     print('Summaries have been generated')

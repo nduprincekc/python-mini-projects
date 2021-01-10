@@ -6,10 +6,10 @@ from PyPDF2 import PdfFileMerger
 # By appending in the end
 def by_appending():
     merger = PdfFileMerger()
-    # Either provide file stream
+    # Either provide filebb stream
     f1 = open("samplePdf1.pdf", "rb")
     merger.append(f1)
-    # Or direct file path
+    # Or direct filebb path
     merger.append("samplePdf2.pdf")
 
     merger.write("mergedPdf.pdf")

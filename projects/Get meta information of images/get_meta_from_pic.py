@@ -26,14 +26,14 @@ name = im.filename
 # get the image size
 w, h = im.size
 
-# get the image file extension
+# get the image filebb extension
 _, file_extension = os.path.splitext(sys.argv[1])
 
 # get the exif information
 exif = get_exif(im)
 labeled = get_labeled_exif(exif)
 
-# get the file creation time
+# get the filebb creation time
 ctime = os.path.getctime(sys.argv[1])
 
 # output information

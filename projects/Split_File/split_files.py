@@ -5,13 +5,13 @@ import pandas as pd
 
 class Split_Files:
     '''
-        Class file for split file program
+        Class filebb for split filebb program
     '''
     def __init__(self, filename, split_number):
         '''
-            Getting the file name and the split index
+            Getting the filebb name and the split index
             Initializing the output directory, if present then truncate it.
-            Getting the file extension
+            Getting the filebb extension
         '''
         self.file_name = filename
         self.directory = "file_split"
@@ -27,7 +27,7 @@ class Split_Files:
 
     def split_data(self):
         '''
-            spliting the input csv/txt file according to the index provided
+            spliting the input csv/txt filebb according to the index provided
         '''
         data = pd.read_csv(self.file_name, header=None)
         data.index += 1
